@@ -59,10 +59,12 @@ function CourseTree({ courses, parentId = null }) {
     <ul>
       {roots.map((course) => (
         <li key={course.id}>
-          <span style={{ fontWeight: "bold" }}>{course.name}</span>
-          {" "}
-          ({course.code}) - {course.department}, שנה {course.year} סמסטר {course.semester} {" "}
-          <a href={course.syllabus} target="_blank" rel="noopener noreferrer">סילבוס</a>
+          <span style={{ fontWeight: "bold" }}>{course.name}</span> (
+          {course.code}) - {course.department}, שנה {course.year} סמסטר{" "}
+          {course.semester}{" "}
+          <a href={course.syllabus} target="_blank" rel="noopener noreferrer">
+            סילבוס
+          </a>
           {courses.some((c) => c.prerequisites.includes(course.code)) && (
             <CourseTree courses={courses} parentId={course.code} />
           )}
@@ -91,21 +93,27 @@ function App() {
           {filtered.map((course) => (
             <li key={course.id}>
               <b>{course.name}</b> ({course.code})<br />
-              מחלקה: {course.department}<br />
-              שנה: {course.year} סמסטר: {course.semester}<br />
+              מחלקה: {course.department}
+              <br />
+              שנה: {course.year} סמסטר: {course.semester}
+              <br />
               קדם קורסים:{" "}
               {course.prerequisites.length
                 ? course.prerequisites.join(", ")
                 : "אין"}
               <br />
-              <a href={course.syllabus} target="_blank" rel="noopener noreferrer">
+              <a
+                href={course.syllabus}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 סילבוס
               </a>
             </li>
           ))}
         </ul>
       ) : (
-        <CourseTree courses={courses} />
+        <CourseTree courses={data.courses} />
       )}
     </div>
   );

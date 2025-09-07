@@ -1,0 +1,152 @@
+{
+  "name": "מדעי המחשב - מסלול ערב - תשפו",
+  "courses":[
+  {
+    "code": "90901",
+    "name": "חשבון דיפרנציאלי ואינטגרלי (חדו\"א1)",
+    "prerequisites": [],
+    "year": 1,
+    "semester": "א"
+  },
+  {
+    "code": "90905",
+    "name": "אלגברה ליניארית",
+    "prerequisites": [],
+    "year": 1,
+    "semester": "א"
+  },
+  {
+    "code": "10016",
+    "name": "מבוא למדעי המחשב",
+    "prerequisites": [],
+    "year": 1,
+    "semester": "ב"
+  },
+  {
+    "code": "90902",
+    "name": "חשבון דיפרנציאלי ואינטגרלי (חדו\"א2)",
+    "prerequisites": ["90901", "90905"],
+    "year": 1,
+    "semester": "ב"
+  },
+  {
+    "code": "90926",
+    "name": "מתמטיקה בדידה",
+    "prerequisites": [],
+    "year": 1,
+    "semester": "ג"
+  },
+  {
+    "code": "10145",
+    "name": "ארגון המחשב ושפת סף",
+    "prerequisites": ["10016"],
+    "year": 2,
+    "semester": "א"
+  },
+  {
+    "code": "10128",
+    "name": "תכנות מונחה עצמים",
+    "prerequisites": ["10016"],
+    "year": 2,
+    "semester": "א"
+  },
+  {
+    "code": "90923",
+    "name": "לוגיקה מתמטית",
+    "prerequisites": ["90926"],
+    "year": 2,
+    "semester": "ב"
+  },
+  {
+    "code": "90954",
+    "name": "אלגברה ליניארית 2",
+    "prerequisites": ["90905"],
+    "year": 2,
+    "semester": "ב"
+  },
+  {
+    "code": "10010",
+    "name": "מבוא לתכנות מערכות",
+    "prerequisites": ["10128"],
+    "year": 2,
+    "semester": "ב"
+  },
+  {
+    "code": "10117",
+    "name": "מבני נתונים",
+    "prerequisites": ["10016"],
+    "year": 2,
+    "semester": "ג"
+  },
+  {
+    "code": "90911",
+    "name": "מבוא להסתברות",
+    "prerequisites": ["90901"],
+    "year": 2,
+    "semester": "ג"
+  },
+  {
+    "code": "10120",
+    "name": "תכנון וניתוח אלגוריתמים",
+    "prerequisites": ["10117"],
+    "year": 3,
+    "semester": "א"
+  },
+  {
+    "code": "10121",
+    "name": "אלגוריתם מתקדם",
+    "prerequisites": ["10120", "10139"],
+    "year": 3,
+    "semester": "ב"
+  },
+  {
+    "code": "19101",
+    "name": "מבוא לבינה מלאכותית",
+    "prerequisites": ["90911", "90926", "10016"],
+    "year": 3,
+    "semester": "ב"
+  },
+  {
+    "code": "10303",
+    "name": "מערכות הפעלה",
+    "prerequisites": ["10139", "10010"],
+    "year": 3,
+    "semester": "ג"
+  },
+  {
+    "code": "10013",
+    "name": "תקשורת מחשבים",
+    "prerequisites": ["10139"],
+    "year": 3,
+    "semester": "ג"
+  },
+  {
+    "code": "11402",
+    "name": "פרויקט במדעי המחשב - חלק 1",
+    "prerequisites": ["10120"],
+    "year": 4,
+    "semester": "א"
+  },
+  {
+    "code": "10324",
+    "name": "מחשוב מקבילי ומבוזר",
+    "prerequisites": ["10120"],
+    "year": 4,
+    "semester": "ב"
+  },
+  {
+    "code": "11403",
+    "name": "פרויקט במדעי המחשב – חלק 2",
+    "prerequisites": ["11402"],
+    "year": 4,
+    "semester": "ב"
+  },
+  {
+    "code": "10014",
+    "name": "מבוא להנדסת תוכנה",
+    "prerequisites": ["10128"],
+    "year": 4,
+    "semester": "ב"
+  }
+]
+}
