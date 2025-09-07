@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "מבוא לתכנות",
+    "code": "10101",
+    "department": "מדעי המחשב",
+    "year": 1,
+    "semester": "א",
+    "prerequisites": [],
+    "syllabus": "/syllabus/10101.pdf"
+  },
+  {
+    "id": 2,
+    "name": "אלגוריתמים",
+    "code": "10210",
+    "department": "מדעי המחשב",
+    "year": 2,
+    "semester": "ב",
+    "prerequisites": ["10101"],
+    "syllabus": "/syllabus/10210.pdf"
+  },
+  {
+    "id": 3,
+    "name": "מערכות הפעלה",
+    "code": "20313",
+    "department": "מדעי המחשב",
+    "year": 3,
+    "semester": "א",
+    "prerequisites": ["10210"],
+    "syllabus": "/syllabus/20313.pdf"
+  }
+]
