@@ -116,7 +116,7 @@
   {
     "code": "10013",
     "name": "תקשורת מחשבים",
-    "prerequisites": ["10139"],
+    "prerequisites": ["10145"],
     "year": 3,
     "semester": "ג"
   },

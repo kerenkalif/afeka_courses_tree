@@ -5,6 +5,7 @@ import { getGraphData } from "./create_graph";
 // דוגמאות לייבוא, אפשר להוסיף עוד קבצים
 import CS_evening_2026 from "./courses_jsons/courses_CS_evening_2026.json";
 import CS_morning_2026 from "./courses_jsons/courses_CS_morning_2026.json";
+import SE_morning_2026 from "./courses_jsons/courses_SE_morning_2026.json";
 
 // פונקציה לתצוגת שם רמה (א1, א2, ב1...)
 function levelToLabel(level) {
@@ -17,6 +18,7 @@ function levelToLabel(level) {
 const availableTrees = [
   { label: CS_evening_2026.name, data: CS_evening_2026 },
   { label: CS_morning_2026.name, data: CS_morning_2026 },
+  { label: SE_morning_2026.name, data: SE_morning_2026 },
 ];
 
 export default function App() {

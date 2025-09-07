@@ -1,0 +1,264 @@
+{
+  "name": "הנדסת תוכנה - מסלול בוקר - תשפו",
+  "courses": [
+    {
+      "code": "90901",
+      "name": "חשבון דיפרנציאלי ואינטגרלי (חדו\"א1)",
+      "prerequisites": [],
+      "year": 1,
+      "semester": "א"
+    },
+    {
+      "code": "90905",
+      "name": "אלגברה ליניארית",
+      "prerequisites": [],
+      "year": 1,
+      "semester": "א"
+    },
+    {
+      "code": "10016",
+      "name": "מבוא למדעי המחשב",
+      "prerequisites": [],
+      "year": 1,
+      "semester": "א"
+    },
+    {
+      "code": "90955",
+      "name": "מתמטיקה בדידה IBL",
+      "prerequisites": [],
+      "year": 1,
+      "semester": "א"
+    },
+    {
+      "code": "90902",
+      "name": "חשבון דיפרנציאלי ואינטגרלי (חדו\"א2)",
+      "prerequisites": ["90901", "90905"],
+      "year": 1,
+      "semester": "ב"
+    },
+    {
+      "code": "90923",
+      "name": "לוגיקה מתמטית למדעי המחשב",
+      "prerequisites": ["90955"],
+      "year": 1,
+      "semester": "ב"
+    },
+    {
+      "code": "10128",
+      "name": "תכנות מונחה עצמים",
+      "prerequisites": ["10016"],
+      "year": 1,
+      "semester": "ב"
+    },
+    {
+      "code": "10145",
+      "name": "ארגון המחשב ושפת סף",
+      "prerequisites": ["10016"],
+      "year": 1,
+      "semester": "ב"
+    },
+    {
+      "code": "10142",
+      "name": "כלי פיתוח",
+      "prerequisites": [],
+      "year": 1,
+      "semester": "ב"
+    },
+    {
+      "code": "10827",
+      "name": "אתיקה להנדסת תוכנה",
+      "prerequisites": [],
+      "year": 1,
+      "semester": "ב"
+    },
+    {
+      "code": "10139",
+      "name": "מודלים חישוביים",
+      "prerequisites": ["90923"],
+      "year": 2,
+      "semester": "א"
+    },
+    {
+      "code": "10013",
+      "name": "תקשורת מחשבים",
+      "prerequisites": ["10145"],
+      "year": 2,
+      "semester": "א"
+    },
+    {
+      "code": "10010",
+      "name": "מבוא לתכנות מערכות",
+      "prerequisites": ["10128"],
+      "year": 2,
+      "semester": "א"
+    },
+     {
+      "code": "90911",
+      "name": "מבוא להסתברות",
+      "prerequisites": ["90901"],
+      "year": 2,
+      "semester": "א"
+    },
+    {
+      "code": "10117",
+      "name": "מבני נתונים",
+      "prerequisites": ["10016"],
+      "year": 2,
+      "semester": "א"
+    },
+    {
+      "code": "10119",
+      "name": "תיכון מונחה עצמים",
+      "prerequisites": ["10128"],
+      "year": 2,
+      "semester": "א"
+    },
+    {
+      "code": "10015",
+      "name": "סטטיסטיקה",
+      "prerequisites": ["90911"],
+      "year": 2,
+      "semester": "ב"
+    },
+     {
+      "code": "10146",
+      "name": "אימות תוכנה",
+      "prerequisites": ["10139"],
+      "year": 2,
+      "semester": "ב"
+    }, 
+    {
+      "code": "10313",
+      "name": "אבטחת מידע",
+      "prerequisites": ["90911", "10013", "90905"],
+      "year": 2,
+      "semester": "ב"
+    },
+    {
+      "code": "10147",
+      "name": "איפיון ממשקי משתמש",
+      "prerequisites": ["10016"],
+      "year": 2,
+      "semester": "ב"
+    },
+    {
+      "code": "19101",
+      "name": "מבוא לבינה מלאכותית",
+      "prerequisites": ["10016", "90955", "90911"],
+      "year": 2,
+      "semester": "ב"
+    },
+    {
+      "code": "10213",
+      "name": "הנדסת דרישות",
+      "prerequisites": ["10119"],
+      "year": 2,
+      "semester": "ב"
+    },
+    {
+      "code": "10149",
+      "name": "עקרונות שפות תכנות",
+      "prerequisites": ["10010"],
+      "year": 3,
+      "semester": "א"
+    },
+    {
+      "code": "10127",
+      "name": "בסיסי נתונים",
+      "prerequisites": ["10016"],
+      "year": 3,
+      "semester": "א"
+    },
+    {
+      "code": "10148",
+      "name": "מידול מערכות תוכנה",
+      "prerequisites": ["10139"],
+      "year": 3,
+      "semester": "א"
+    },
+    {
+      "code": "10303",
+      "name": "מערכות הפעלה",
+      "prerequisites": ["10010", "10145"],
+      "year": 3,
+      "semester": "א"
+    },
+     {
+      "code": "10120",
+      "name": "תכנון וניתוח אלגוריתמים",
+      "prerequisites": ["10117"],
+      "year": 3,
+      "semester": "א"
+    },
+    {
+      "code": "10334",
+      "name": "קומפילציה",
+      "prerequisites": ["10139"],
+      "year": 3,
+      "semester": "ב"
+    },
+    {
+      "code": "10324",
+      "name": "מחשוב מקבילי ומבוזר",
+      "prerequisites": ["10120"],
+      "year": 3,
+      "semester": "ב"
+    },
+    {
+      "code": "10143",
+      "name": "הנדסת תוכנה אינטגרטיבית",
+      "prerequisites": ["10148", "10151", "10303", "10142"],
+      "year": 3,
+      "semester": "ב"
+    },
+    {
+      "code": "10121",
+      "name": "אלגוריתם מתקדם וסיבוכיות",
+      "prerequisites": ["10120", "10139"],
+      "year": 3,
+      "semester": "ב"
+    },
+    {
+      "code": "10151",
+      "name": "ארכיטקטורת מערכות תוכנה",
+      "prerequisites": ["10213"],
+      "year": 3,
+      "semester": "ב"
+    },
+    {
+      "code": "10411",
+      "name": "פרוייקט גמר - חלק א'",
+      "prerequisites": ["10213"],
+      "year": 3,
+      "semester": "ב"
+    },
+    {
+      "code": "10110",
+      "name": "מערכות משובצות מחשב'",
+      "prerequisites": ["10010", "10145"],
+      "year": 4,
+      "semester": "א"
+    },
+    {
+      "code": "10422",
+      "name": "פרוייקט גמר - חלק ב'",
+      "prerequisites": ["10411"],
+      "year": 4,
+      "semester": "א"
+    },
+    {
+      "code": "10241",
+      "name": "הבטחת איכות תוכנה'",
+      "prerequisites": ["10128"],
+      "year": 4,
+      "semester": "ב"
+    },
+    {
+      "code": "10423",
+      "name": "פרוייקט גמר - חלק ג'",
+      "prerequisites": ["10422"],
+      "year": 4,
+      "semester": "ב"
+    }
+  ]
+}
