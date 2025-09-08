@@ -8,11 +8,21 @@ import CS_morning_2026 from "./courses_jsons/courses_CS_morning_2026.json";
 import SE_morning_2026 from "./courses_jsons/courses_SE_morning_2026.json";
 
 // פונקציה לתצוגת שם רמה (א1, א2, ב1...)
-function levelToLabel(level) {
+function levelToLabelOLD(level) {
   const years = ["א", "ב", "ג", "ד"];
   const year = years[Math.floor(level / 2)] || "?";
   const sem = (level % 2) + 1;
   return `${year}${sem}`;
+}
+
+function levelToLabel(level, semestersPerYear) {
+  const years = ["1", "2", "3", "4"];
+  const semesters = ["א", "ב", "קיץ"];
+
+  const year = Math.floor(level / semestersPerYear);
+  const semester = level % semestersPerYear;
+
+  return `${years[year] || "?"}${semesters[semester] || "?"}`;
 }
 
 const availableTrees = [
@@ -26,7 +36,9 @@ export default function App() {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   const selectedTree = availableTrees[selectedIndex];
-  const { nodes, edges } = getGraphData(selectedTree.data.courses);
+  const { nodes, edges, semestersPerYear } = getGraphData(
+    selectedTree.data.courses
+  );
 
   // כל רמות השכבות לגרף התוויות הצמוד
   const allLevels = nodes.map((n) => n.level);
@@ -114,7 +126,7 @@ export default function App() {
                 alignItems: "center",
               }}
             >
-              {levelToLabel(level)}
+              {levelToLabel(level, semestersPerYear)}
             </div>
           ))}
         </div>
