@@ -7,14 +7,6 @@ import CS_evening_2026 from "./courses_jsons/courses_CS_evening_2026.json";
 import CS_morning_2026 from "./courses_jsons/courses_CS_morning_2026.json";
 import SE_morning_2026 from "./courses_jsons/courses_SE_morning_2026.json";
 
-// פונקציה לתצוגת שם רמה (א1, א2, ב1...)
-function levelToLabelOLD(level) {
-  const years = ["א", "ב", "ג", "ד"];
-  const year = years[Math.floor(level / 2)] || "?";
-  const sem = (level % 2) + 1;
-  return `${year}${sem}`;
-}
-
 function levelToLabel(level, semestersPerYear) {
   const years = ["1", "2", "3", "4"];
   const semesters = ["א", "ב", "קיץ"];
@@ -45,12 +37,12 @@ export default function App() {
   const minLevel = Math.min(...allLevels);
   const maxLevel = Math.max(...allLevels);
 
-  const totalHeight = 600;
-  const labelHeight = totalHeight / (maxLevel - minLevel + 1);
-  const graphWidth = "89%";
-
   // שליפה מסודרת של כל הערכים הייחודיים של הרמות
   const levels = [...new Set(nodes.map((n) => n.level))].sort((a, b) => a - b);
+
+  const totalHeight = Math.max(600, levels.length * 100);
+  const labelHeight = totalHeight / (maxLevel - minLevel + 1);
+  const graphWidth = "89%";
 
   useEffect(() => {
     const dataSet = {
@@ -77,6 +69,9 @@ export default function App() {
       },
       edges: { arrows: "to" },
       physics: { enabled: false },
+      interaction: {
+        zoomView: false,
+      },
     };
 
     new Network(containerRef.current, dataSet, options);
@@ -103,7 +98,9 @@ export default function App() {
       </div>
 
       {/* סרגל הסמסטרים + גרף */}
-      <div style={{ display: "flex", direction: "rtl" }}>
+      <div
+        style={{ display: "flex", direction: "rtl", minHeight: totalHeight }}
+      >
         {/* סרגל הסמסטרים בצד ימין */}
         <div
           style={{
