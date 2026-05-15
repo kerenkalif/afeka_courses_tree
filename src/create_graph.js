@@ -2,10 +2,6 @@ import data from "./courses_jsons/courses_CS_morning_2026.json";
 
 const semesterOrder = { א: 0, ב: 1, ג: 2 }; // סדר הסמסטרים
 
-function getCourseLevel(course) {
-  return (course.year - 1) * 2 + semesterOrder[course.semester];
-}
-
 export function getGraphData(coursesList = data.courses) {
   console.log(`Data= ${data.courses}`);
   // תמיכה במבנה חדש עם שדה courses

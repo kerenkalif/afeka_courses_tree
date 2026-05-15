@@ -6,6 +6,7 @@ import { getGraphData } from "./create_graph";
 import CS_evening_2026 from "./courses_jsons/courses_CS_evening_2026.json";
 import CS_morning_2026 from "./courses_jsons/courses_CS_morning_2026.json";
 import SE_morning_2026 from "./courses_jsons/courses_SE_morning_2026.json";
+import CS_morning_2027 from "./courses_jsons/courses_CS_morning_2027.json";
 
 function levelToLabel(level, semestersPerYear) {
   const years = ["1", "2", "3", "4"];
@@ -21,6 +22,7 @@ const availableTrees = [
   { label: CS_evening_2026.name, data: CS_evening_2026 },
   { label: CS_morning_2026.name, data: CS_morning_2026 },
   { label: SE_morning_2026.name, data: SE_morning_2026 },
+  { label: CS_morning_2027.name, data: CS_morning_2027 },
 ];
 
 export default function App() {
@@ -29,7 +31,7 @@ export default function App() {
 
   const selectedTree = availableTrees[selectedIndex];
   const { nodes, edges, semestersPerYear } = getGraphData(
-    selectedTree.data.courses
+    selectedTree.data.courses,
   );
 
   // כל רמות השכבות לגרף התוויות הצמוד
@@ -74,65 +76,91 @@ export default function App() {
       },
     };
 
-    new Network(containerRef.current, dataSet, options);
+    const network = new Network(containerRef.current, dataSet, options);
+    network.on("stabilizationIterationsDone", function () {
+      network.fit({
+        animation: false,
+      });
+    });
   }, [nodes, edges]);
 
   return (
-    <div>
-      {/* כותרת ממורכזת */}
-      {/*<h1 style={{ textAlign: "center" }}>{selectedTree.label}</h1>*/ <br />}
-
-      {/* רשימת בחירה */}
-      <div style={{ textAlign: "center", marginBottom: "16px" }}>
-        <select
-          onChange={(e) => setSelectedIndex(Number(e.target.value))}
-          value={selectedIndex}
-          style={{ fontSize: "16px", padding: "8px" }}
-        >
-          {availableTrees.map((tree, idx) => (
-            <option key={idx} value={idx}>
-              {tree.label}
-            </option>
-          ))}
-        </select>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        height: "100vh",
+        overflow: "hidden",
+      }}
+    >
+      {/* אזור קבוע למעלה - לא גולל */}
+      <div
+        style={{
+          backgroundColor: "white",
+          borderBottom: "2px solid #e0e0e0",
+          padding: "15px",
+          flexShrink: 0,
+        }}
+      >
+        <div style={{ textAlign: "center" }}>
+          <select
+            onChange={(e) => setSelectedIndex(Number(e.target.value))}
+            value={selectedIndex}
+            style={{ fontSize: "16px", padding: "8px" }}
+          >
+            {availableTrees.map((tree, idx) => (
+              <option key={idx} value={idx}>
+                {tree.label}
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
 
-      {/* סרגל הסמסטרים + גרף */}
+      {/* אזור הגרף - גולל בנפרד */}
       <div
-        style={{ display: "flex", direction: "rtl", minHeight: totalHeight }}
+        style={{
+          flex: 1,
+          overflow: "auto",
+          padding: "20px 0",
+        }}
       >
-        {/* סרגל הסמסטרים בצד ימין */}
         <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "flex-end",
-            height: totalHeight,
-            width: "3em",
-            fontSize: "18px",
-            marginRight: "10px",
-            marginTop: "0.5em",
-          }}
+          style={{ display: "flex", direction: "rtl", minHeight: totalHeight }}
         >
-          {levels.map((level) => (
-            <div
-              key={level}
-              style={{
-                height: labelHeight,
-                display: "flex",
-                alignItems: "center",
-              }}
-            >
-              {levelToLabel(level, semestersPerYear)}
-            </div>
-          ))}
-        </div>
+          {/* סרגל הסמסטרים בצד ימין */}
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "flex-end",
+              height: totalHeight,
+              width: "3em",
+              fontSize: "18px",
+              marginRight: "10px",
+              marginTop: "0.5em",
+            }}
+          >
+            {levels.map((level) => (
+              <div
+                key={level}
+                style={{
+                  height: labelHeight,
+                  display: "flex",
+                  alignItems: "center",
+                }}
+              >
+                {levelToLabel(level, semestersPerYear)}
+              </div>
+            ))}
+          </div>
 
-        {/* מיכל הגרף */}
-        <div
-          ref={containerRef}
-          style={{ height: totalHeight, width: graphWidth, margin: "0 auto" }}
-        />
+          {/* מיכל הגרף */}
+          <div
+            ref={containerRef}
+            style={{ height: totalHeight, width: graphWidth, margin: "0 auto" }}
+          />
+        </div>
       </div>
     </div>
   );

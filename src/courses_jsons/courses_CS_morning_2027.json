@@ -1,0 +1,210 @@
+{
+  "name": "מדעי המחשב - מסלול בוקר - תשפז",
+  "courses": [
+    {
+  "name": "חשבון דיפרנציאלי ואינטגרלי (חדו\"א) 1",
+  "code": "90901",
+  "department": "מדמח",
+  "year": 1,
+  "semester": "א",
+  "prerequisites": [],
+  "syllabus": ""
+},
+{
+  "name": "אלגברה ליניארית",
+  "code": "90905",
+  "department": "מדמח",
+  "year": 1,
+  "semester": "א",
+  "prerequisites": [],
+  "syllabus": ""
+},
+{
+  "name": "מבוא למדעי המחשב",
+  "code": "10016",
+  "department": "מדמח",
+  "year": 1,
+  "semester": "א",
+  "prerequisites": [],
+  "syllabus": ""
+},
+{
+  "name": "מתמטיקה בדידה",
+  "code": "90926",
+  "department": "מדמח",
+  "year": 1,
+  "semester": "א",
+  "prerequisites": [],
+  "syllabus": ""
+},
+{
+  "name": "חשבון דיפרנציאלי ואינטגרלי (חדו\"א) 2",
+  "code": "90902",
+  "department": "מדמח",
+  "year": 1,
+  "semester": "ב",
+  "prerequisites": ["90901", "90905"],
+  "syllabus": ""
+},
+{
+  "name": "מבוא להסתברות",
+  "code": "90911",
+  "department": "מדמח",
+  "year": 1,
+  "semester": "ב",
+  "prerequisites": ["90901"],
+  "syllabus": ""
+},
+{
+  "name": "תכנות מונחה עצמים",
+  "code": "10128",
+  "department": "מדמח",
+  "year": 1,
+  "semester": "ב",
+  "prerequisites": ["10016"],
+  "syllabus": ""
+},
+{
+  "name": "ארגון המחשב ושפת סף",
+  "code": "10145",
+  "department": "מדמח",
+  "year": 1,
+  "semester": "ב",
+  "prerequisites": ["10016"],
+  "syllabus": ""
+},
+{
+  "name": "לוגיקה מתמטית למדעי המחשב",
+  "code": "90923",
+  "department": "מדמח",
+  "year": 2,
+  "semester": "א",
+  "prerequisites": ["90926"],
+  "syllabus": ""
+},
+{
+  "name": "מבני נתונים",
+  "code": "10117",
+  "department": "מדמח",
+  "year": 2,
+  "semester": "א",
+  "prerequisites": ["10128"],
+  "syllabus": ""
+},
+{
+  "name": "מבוא לתכנות מערכות",
+  "code": "10010",
+  "department": "מדמח",
+  "year": 2,
+  "semester": "א",
+  "prerequisites": ["10128"],
+  "syllabus": ""
+},
+{
+  "name": "אלגברה ליניארית 2",
+  "code": "90954",
+  "department": "מדמח",
+  "year": 2,
+  "semester": "א",
+  "prerequisites": ["90905"],
+  "syllabus": ""
+},
+{
+  "name": "מבוא לבינה מלאכותית",
+  "code": "19101",
+  "department": "מדמח",
+  "year": 2,
+  "semester": "א",
+  "prerequisites": ["10016", "90902", "90911", "90926"],
+  "syllabus": ""
+},
+{
+  "name": "תקשורת מחשבים",
+  "code": "10013",
+  "department": "מדמח",
+  "year": 2,
+  "semester": "ב",
+  "prerequisites": ["10145"],
+  "syllabus": ""
+},
+{
+  "name": "מודלים חישוביים",
+  "code": "10139",
+  "department": "מדמח",
+  "year": 2,
+  "semester": "ב",
+  "prerequisites": ["90923"],
+  "syllabus": ""
+},
+{
+  "name": "תכנון וניתוח אלגוריתמים",
+  "code": "10120",
+  "department": "מדמח",
+  "year": 2,
+  "semester": "ב",
+  "prerequisites": ["10117"],
+  "syllabus": ""
+},
+{
+  "name": "מערכות הפעלה",
+  "code": "10303",
+  "department": "מדמח",
+  "year": 2,
+  "semester": "ב",
+  "prerequisites": ["10145", "10010"],
+  "syllabus": ""
+},
+{
+  "name": "מחשוב מקבילי ומבוזר",
+  "code": "10324",
+  "department": "מדמח",
+  "year": 3,
+  "semester": "א",
+  "prerequisites": ["10120"],
+  "syllabus": ""
+},
+{
+  "name": "קומפילציה",
+  "code": "10334",
+  "department": "מדמח",
+  "year": 3,
+  "semester": "א",
+  "prerequisites": ["10139"],
+  "syllabus": ""
+},
+{
+  "name": "פרויקט במדעי המחשב - חלק 1",
+  "code": "11402",
+  "department": "מדמח",
+  "year": 3,
+  "semester": "א",
+  "prerequisites": ["10120"],
+  "syllabus": ""
+},
+{
+  "name": "מבוא להנדסת תוכנה",
+  "code": "10014",
+  "department": "מדמח",
+  "year": 3,
+  "semester": "א",
+  "prerequisites": ["10128"],
+  "syllabus": ""
+},
+{
+  "name": "אלגוריתם מתקדם",
+  "code": "10121",
+  "department": "מדמח",
+  "year": 3,
+  "semester": "ב",
+  "prerequisites": ["10120", "10139"],
+  "syllabus": ""
+},
+{
+  "name": "פרויקט במדעי המחשב – חלק 2",
+  "code": "11403",
+  "department": "מדמח",
+  "year": 3,
+  "semester": "ב",
+  "prerequisites": ["11402"],
+  "syllabus": ""
+}]}
